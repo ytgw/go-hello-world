@@ -1,4 +1,5 @@
 FROM golang
 
 COPY ./hello.go ./
-CMD ["go", "run", "hello.go"]
+RUN go build hello.go
+CMD ["./hello"]
